@@ -2,8 +2,11 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
+
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    
     steps:
-      - run: sudo apt-get install hugo
       - run: echo "Installing hugo"
+      - name: Action Hugo
+        uses: kevvurs/action-hugo@v1.0-rc2
